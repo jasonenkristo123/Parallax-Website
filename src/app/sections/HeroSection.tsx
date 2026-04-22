@@ -52,7 +52,7 @@ export default function HeroSection() {
         <section className="bg-main-bg">
             <div className="hero-container">
                 <Image 
-                    src='/images/static-img.png' 
+                    src='/images/hero-img.png' 
                     alt="static image"   
                     className="absolute bottom-0 left-1/2 -translate-x-1/2 object-cover scale-100 md:scale-150 " 
                     width={370}

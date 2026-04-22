@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./sections/HeroSection";
 import { gsap } from "gsap";
 import MessageSection from "./sections/MessageSection";
+import FlavorSection from "./sections/FlavorSection";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <MessageSection />
+      <FlavorSection />
     </main>
   );
 }
