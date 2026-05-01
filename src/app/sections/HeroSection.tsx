@@ -2,10 +2,18 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 
 export default function HeroSection() {
 
+    const isMobile = useMediaQuery({
+        query: "(max-width: 768px)"
+    });
+
+    const isTablet = useMediaQuery({
+        query: "(max-width: 1024px)"
+    });
 
     useGSAP(() => {
         const titleSplit = SplitText.create('.hero-title', {
@@ -25,11 +33,11 @@ export default function HeroSection() {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             ease: "circ.out"
         }, "-=0.5")
-        .from(titleSplit.chars, {
-            yPercent: 200,
-            stagger: 0.02,
-            ease: "power2.out"
-        }, "-=0.5");
+            .from(titleSplit.chars, {
+                yPercent: 200,
+                stagger: 0.02,
+                ease: "power2.out"
+            }, "-=0.5");
 
         const heroTl = gsap.timeline({
             scrollTrigger: {
@@ -51,15 +59,24 @@ export default function HeroSection() {
     return (
         <section className="bg-main-bg">
             <div className="hero-container">
-                <Image 
-                    src='/images/hero-img.png' 
-                    alt="static image"   
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 object-cover scale-100 md:scale-150 " 
-                    width={370}
-                    height={410}
-                    unoptimized
-                    
-                />
+                {
+                    isTablet ? (
+                        <>
+                            {
+                                isMobile && (
+                                    <img src="/images/hero-bg.png" alt="" className="absolute bottom-40 size-full object-cover" />
+                                )}
+                            <img src="/images/hero-img.png" alt="" className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto" />
+                        </>
+                    ) : (
+                        <video
+                            src="/videos/hero-bg.mp4"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            autoPlay
+                            muted
+                            playsInline />
+                    )
+                }
                 <div className="hero-content opacity-0">
                     <div className="overflow-hidden">
                         <h1 className="hero-title">
@@ -67,7 +84,7 @@ export default function HeroSection() {
                         </h1>
                     </div>
                     <div style={{
-                        clipPath:"polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+                        clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
                     }} className="hero-text-scroll">
                         <div>
                             <h1 className="hero-subtitle">
