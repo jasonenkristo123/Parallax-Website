@@ -62,7 +62,6 @@ export default function NutritionSection() {
     
     return (
         <section className="nutrition-section ">
-            {/* <Image src='/images/slider-dip.png' alt="slider" fill className="object-cover" /> */}
             <img
                 src="/images/slider-dip.png"
                 alt="slider"
@@ -87,7 +86,7 @@ export default function NutritionSection() {
                             clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"
                         }} className="nutrition-text-scroll place-self-start">
                             <div className="bg-yellow-brown pb-5 md:pt-0 pt-3 md:px-5 px-3 inline-block">
-                                <h2 className="text-milk-yellow">
+                                <h2 className="text-[#f1f5f9]">
                                     Body Good
                                 </h2>
                             </div>

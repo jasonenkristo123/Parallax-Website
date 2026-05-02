@@ -21,7 +21,7 @@ export default function MessageSection() {
         });
 
         gsap.to(firstMsgSplit.words, {
-            color: "#faeade",
+            color: "#f1f5f9",
             ease: "power1.in",
             stagger: 1,
             scrollTrigger: {
@@ -33,7 +33,7 @@ export default function MessageSection() {
         })
 
         gsap.to(secondMsgSplit.words, {
-            color: "#faeade",
+            color: "#f1f5f9",
             ease: "power1.in",
             stagger: 1,
             scrollTrigger: {
@@ -91,7 +91,7 @@ export default function MessageSection() {
                             clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"
                         }} className="msg-text-scroll">
                             <div className="bg-light-brown md:pb-5 pb-3 px-5">
-                                <h2 className="text-red-rwn">
+                                <h2 className="text-[#f1f5f9]">
                                     Fuel Up
                                 </h2>
                             </div>

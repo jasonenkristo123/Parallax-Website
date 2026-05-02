@@ -57,31 +57,31 @@ export default function BenefitSection() {
                     <div className="mt-20 col-center">
                         <ClipPathTitle 
                             title="Shelf Stable" 
-                            color="#faeade" 
-                            bg="#c88e64" 
+                            color="#f1f5f9" 
+                            bg="#334155" 
                             className="first-title" 
-                            borderColor="#222123" 
+                            borderColor="#020617" 
                         />
                         <ClipPathTitle 
                             title="Protein + Caffeine" 
-                            color="#222123" 
-                            bg="#faeade" 
+                            color="#020617" 
+                            bg="#94a3b8" 
                             className="second-title" 
-                            borderColor="#222123" 
+                            borderColor="#020617" 
                         />
                         <ClipPathTitle 
                             title="Infinitely recyclable" 
-                            color="#faeade" 
-                            bg="#7F3B2D" 
+                            color="#f1f5f9" 
+                            bg="#1e293b" 
                             className="third-title" 
-                            borderColor="#222123" 
+                            borderColor="#020617" 
                         />
                         <ClipPathTitle 
                             title="Lactose Free" 
-                            color="#2E2D2F" 
-                            bg="#FED775" 
+                            color="#020617" 
+                            bg="#cbd5e1" 
                             className="fourth-title" 
-                            borderColor="#222123" 
+                            borderColor="#020617" 
                         />
                     </div>
 

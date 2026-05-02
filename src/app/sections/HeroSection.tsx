@@ -80,7 +80,7 @@ export default function HeroSection() {
                 <div className="hero-content opacity-0">
                     <div className="overflow-hidden">
                         <h1 className="hero-title">
-                            Freaking Delicious
+                            Very delicious
                         </h1>
                     </div>
                     <div style={{
